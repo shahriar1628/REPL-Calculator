@@ -39,4 +39,15 @@ public class AppTest
         ) ;
         assertTrue(write);
     }
+
+    @Test
+    public void testdir() {
+        FileReadWRite.makeSingleDiectory("C:\\\\Directory1");
+    }
+
+
+    @Test
+    public void testmuldir() {
+        FileReadWRite.makeMultipleDiectories("C:\\\\Directory2\\\\Sub2\\\\Sub-Sub2");
+    }
 }

@@ -49,4 +49,37 @@ public class FileReadWRite {
             return null ;
         }
     }
+
+    public static void makeSingleDiectory(String path) {
+        try {
+            File file = new File(path);
+            if (!file.exists()) {
+                if (file.mkdir()) {
+                    System.out.println("Directory is created!");
+                } else {
+                    System.out.println("Failed to create directory!");
+                }
+            }
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+
+    public static void makeMultipleDiectories(String path) {
+        try {
+            File file = new File(path);
+            if (!file.exists()) {
+                if (file.mkdirs()) {
+                    System.out.println("Multiple directories are created!");
+                } else {
+                    System.out.println("Failed to create multiple directories");
+                }
+            }
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
 }
